@@ -7,7 +7,7 @@ export default class App extends React.Component {
 
   componentDidMount() {
     fetch('http://api.open-notify.org/astros.json')
-      .then(response => response.json)
+      .then(response => response.json())
       .then(data => this.setState({
         peopleInSpace: data.people
       }))
@@ -15,7 +15,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div>{this.state.peopleInSpace.map(person => person.name)}</div>
+      <div>{this.state.peopleInSpace.map((person, id) => <p key={id}>{person.name}</p>)}</div>
     )
   }
 }
