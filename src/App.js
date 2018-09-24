@@ -21,7 +21,9 @@ export default class App extends Component {
     console.log(this.state.peopleInSpace)
     return (
       <div>
-        {this.state.peopleInSpace.map(p => p.name)} 
+      {this.state.peopleInSpace.map(p =>
+      <p>{p.name}</p>
+      )}
       </div>
     )
   }
