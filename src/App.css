@@ -2,11 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  color: burlywood;
+  color: yellow;
   font-variant-caps: small-caps;
   font-style: oblique;
-}
-
-section {
-  background-color: black;
+  text-shadow: 1px 2px 7px #ff0303;
 }

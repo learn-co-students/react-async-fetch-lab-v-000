@@ -8,8 +8,14 @@ class App extends Component {
   }
 
   render() {
+    let imgUrl = 'images/outerspace.jpg';
     return (
-      <section>
+      <section className = 'Component-Bg'
+         style = {{ backgroundImage: 'url(' + imgUrl + ')',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center center',
+                    backgroundRepeat: 'no-repeat',
+                  }}>
         <div>
           <h1>Astronauts!</h1>
         </div>
