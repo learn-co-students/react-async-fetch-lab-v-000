@@ -5,7 +5,7 @@ class ExampleComponent extends Component {
   render() {
     return (
       <strong>
-        Example!
+        this.props.name
       </strong>
     )
   }
