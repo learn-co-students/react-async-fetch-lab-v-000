@@ -20,12 +20,12 @@ export default class App extends Component {
     render() {
         return(
             <div>
-            <h1>PEOPLE IN SPACE</h1>
-            <ol>
-                {this.state.peopleInSpace.map(person => {
-                    return <li>{person.name}</li>
-                })}
-            </ol>
+                <h1>PEOPLE IN SPACE</h1>
+                <ol>
+                    {this.state.peopleInSpace.map(person => {
+                        return <li>{person.name}</li>
+                    })}
+                </ol>
             </div>
         )
     }
