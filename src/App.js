@@ -14,12 +14,14 @@ class App extends React.Component {
   }
 
   render() {
-
-    return (
-      <div>
-        {this.state.data.map((person, index) => <h1 key={index}>{person.name}</h1>)}
-      </div>
-    );
+    if (this.state.data !== []) {
+      return (
+        <div>
+          {this.state.data.map((person, index) => <h1 key={index}>{person.name}</h1>)}
+        </div>
+      );
+    }
+    
   }
 }
 
