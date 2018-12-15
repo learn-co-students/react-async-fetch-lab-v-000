@@ -9,18 +9,18 @@ class App extends React.Component {
     const url = 'http://api.open-notify.org/astros.json'
     fetch(url)
       .then(response => response.json())
-      .then(data => this.setState({data}))
+      .then(data => this.setState({data: data.people}))
 
   }
 
   render() {
-    if (this.state.data !== []) {
+    
       return (
         <div>
           {this.state.data.map((person, index) => <h1 key={index}>{person.name}</h1>)}
         </div>
       );
-    }
+    
     
   }
 }
