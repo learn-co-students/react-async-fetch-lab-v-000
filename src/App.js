@@ -9,7 +9,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        {this.state.peopleInSpace.map(person => person.name)}
+        <h1>{this.state.peopleInSpace.map(person => person.name)}</h1>
       </div>
     )
   }
@@ -17,11 +17,7 @@ export default class App extends Component {
   componentDidMount() {
     fetch('http://api.open-notify.org/astros.json')
       .then(response => response.json())
-      .then(data => {
-        this.setState({
-          peopleInSpace: data.people
-        })
-      })
+      .then(data => {this.setState({  peopleInSpace: data.people   }) })
   }
 }
  
