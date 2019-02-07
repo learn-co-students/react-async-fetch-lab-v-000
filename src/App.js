@@ -12,17 +12,14 @@ class App extends Component {
     componentDidMount() {
         fetch('http://api.open-notify.org/astros.json')
         .then(res => res.json())
-        .then(astronauts => this.setState({astronauts}))
+        .then(({people}) => this.setState({astronauts: people}))
         .catch(err=> console.log("Error"))
     }
 
     render() {
-        const astronauts = this.state.astronauts.map((astro, index) => (
-            <p>astronaut={astro} key={index}</p>
-        ))
         return (
             <div>
-                {astronauts}
+                {this.state.astronauts.map((astronaut, index) => <h3 key={index}>{astronaut.name}, {astronaut.craft}</h3>)}
             </div>
         )
     }
