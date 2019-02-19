@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class App extends Component {
 
     state = {
-        response: null,
+        response: [],
     }
 
     componentDidMount() {
@@ -13,9 +13,14 @@ export default class App extends Component {
     }
 
     render() {
+        console.log(this.state.response)
+        const people = this.state.response.people;
         return (
+            
             <div>
-                {this.state.repsonse}
+                {people ? people.map((person,index) => {
+                    return (<p key={index}>{`${person.name} is currently on ${person.craft}.`}</p>)
+                }) : null }
             </div>
         )
     }
