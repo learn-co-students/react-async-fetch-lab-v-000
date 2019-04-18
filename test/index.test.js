@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import { configure, shallow, mount } from 'enzyme';
 import { expect } from 'chai';
 import { spy, stub, useFakeTimers } from 'sinon'
-const fetchMock = require('fetch-mock')
+// const fetchMock = require('fetch-mock')
+const fetchMock = require('fetch-mock/es5/server')
+
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
