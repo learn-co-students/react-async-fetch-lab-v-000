@@ -1,14 +1,14 @@
 
 
 // create your App component here
-import React, {component} from 'react'
+import React, { Component } from 'react'
 
-class App extends component {
+class App extends Component {
     state = {
         peopleInSpace: []
     }
 
-    renders(){
+    render(){
       return(
           <div>
           {this.state.peopleInSpace.map(person => person.name)}
