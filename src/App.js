@@ -6,16 +6,6 @@ class App extends Component {
     peopleInSpace: []
   }
  
-  render() {
-    return (
-      <div>
-        <ul>
-            <li>{this.state.peopleInSpace.map(person => person.name)}</li>
-        </ul>
-      </div>
-    )
-  }
- 
   componentDidMount() {
     fetch('http://api.open-notify.org/astros.json')
       .then(response => response.json())
@@ -24,6 +14,16 @@ class App extends Component {
           peopleInSpace: data.people
         })
       })
+  }
+
+  render() {
+    return (
+      <div>
+        <ul>
+            <li>{this.state.peopleInSpace.map(person => person.name)}</li>
+        </ul>
+      </div>
+    )
   }
 }
  
