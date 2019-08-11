@@ -1,4 +1,4 @@
-# React Fetch Lab
+npm install# React Fetch Lab
 
 ## Objectives
 
