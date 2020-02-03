@@ -19,10 +19,12 @@ class App extends Component {
   render() {
     return (
      <div> 
-      	
-     These are the people in the list:<p><li>{this.state.people.map(person => person.name)}
-      	</li>
-      	</p>
+      These are the people in the list:
+       <ul>
+       {this.state.people.map(person => 
+        <li key={person.id}>
+        {person.name} </li>)}
+      	</ul>
       </div>
     )
   }
