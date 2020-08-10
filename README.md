@@ -1,3 +1,9 @@
+Tests passing:
+<App />
+    ✓ mounts correctly
+    ✓ calls componentDidMount and fetch
+
+
 # React Fetch Lab
 
 ## Objectives
